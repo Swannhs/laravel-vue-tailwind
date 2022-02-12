@@ -1,47 +1,16 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
-    </div>
-  </header>
-  <main>
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <!-- Replace with your content -->
-      <div class="px-4 py-6 sm:px-0">
-        <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"/>
-      </div>
-      <!-- /End replace -->
-    </div>
-  </main>
+  <DashboardComponent title="Dashboard">
+    This is continent of dashboard
+  </DashboardComponent>
 </template>
 
 <script>
-import {Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems} from '@headlessui/vue'
-import {BellIcon, MenuIcon, XIcon} from '@heroicons/vue/outline'
-import {computed} from "vue";
-import store from "../store";
-
-
-const userNavigation = [
-  {name: 'Your Profile', href: '#'},
-  {name: 'Settings', href: '#'},
-  {name: 'Sign out', href: '#'},
-]
-
-export default {
-  components: {
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuItems,
-    BellIcon,
-    MenuIcon,
-    XIcon,
-  },
-  name: 'Dashboard',
-}
+import DashboardComponent from '../components/DashboardComponent.vue'
+  export default {
+    components: {
+      name: 'Dashboard',
+      DashboardComponent
+    }
+  }
 </script>

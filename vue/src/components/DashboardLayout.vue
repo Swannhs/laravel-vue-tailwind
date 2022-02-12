@@ -140,7 +140,7 @@ export default {
   },
   setup() {
     return {
-      user: computed(() => store.state.user),
+      user: computed(() => store.state.user.data),
       navigation,
       userNavigation,
     }

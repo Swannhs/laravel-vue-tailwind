@@ -44,17 +44,14 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth && !store.state.user.token) {
-    console.log('IF')
     next({
       name: 'Login',
     })
   } else if (store.state.user.token && (to.name === 'Login' || to.name === 'Register')) {
-    console.log('ELSE IF')
     next({
       name: 'Dashboard',
     })
   } else {
-    console.log('ELSE')
     next()
   }
 })
